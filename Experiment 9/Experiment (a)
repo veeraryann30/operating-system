@@ -1,0 +1,15 @@
+DATE: 19/10/26
+EXP. No. 9(a)
+
+Expt. 9 (a) CPU task Stimulation in C.
+
+Steps: 
+(i) Open Ubuntu terminal.
+(ii) Create a C program using: `nano expt 9.c`
+(iii) Write the C program to stimulate a CPU intensive task using ∞ loop
+(iv) Save and compile using: `gcc expt9.c -o expt9`
+(v) Execute using `./expt9`
+(vi) Observe the counter values displayed on the terminal.
+(vii) Press Ctrl + C to terminate the program.
+(viii) Enter the foll. command to monitor system processes and CPU utilization: `top`
+(ix) Observe the CPU usage and running processes. Press q to exit and the top command.

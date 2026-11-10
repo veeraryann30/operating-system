@@ -1,0 +1,21 @@
+DATE.. 24/08/26
+EXP. No... 03
+
+Experiment - (a): Use date and who in a single command displaying date output on the screen and redirecting who output to a file.
+
+Command: date; w | cat > who.txt
+Explanation:
+i) date : displays the current date and time on the screen.
+ii) ; : separates two commands and executes them sequentially
+iii) w : displays information about currently logged in users.
+iv) | : pipe operator, passes the output of w to cat > who.txt
+v) cat > who.txt : reads the input recieved from w and redirects the output in a file (who.txt).
+
+Procedure :
+1. Open the terminal.
+2. Enter: date; w | cat > who.txt
+3. Press enter.
+4. The date and time are displayed on the screen.
+5. The output of w is stored in who.txt.
+6. To view the saved output, enter: cat who.txt.
+Result : The date command output was displayed on the screen, while the output of the w command was successfully redirected and stored in who.txt.

@@ -1,0 +1,20 @@
+DATE. 13-09-26
+EXP. No. 06
+
+Experiment - (b): Display lines b/w start and end line numbers using shell script passed as arguments.
+
+Steps:
+1. Open Terminal.
+2. Create the script -> nano 6b.sh
+3. Enter -> #!/bin/bash
+read -p "Enter file name : " file
+read -p "Enter starting line number : " start
+read -p "Enter ending line number : " end
+sed -n "${start},${end}p" "$file"
+4. Save using Ctrl + O -> Enter and exit using Ctrl + X.
+5. Give execution permission -> chmod +x exp6b.sh
+6. (i) Create a sample file -> nano test.txt
+(ii) Enter several lines, save and exit.
+7. Run the filename, starting line and ending line when asked.
+
+Result: The specified range of lines is displayed from the file.

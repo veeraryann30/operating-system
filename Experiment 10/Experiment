@@ -1,0 +1,38 @@
+Exp:-10 Creation and Execution of Child process using fork().
+
+Aim:- To write and execute a C program that creates a child process, waits for its termination and displays its PID.
+
+Requirements:- Ubuntu OS, Virtual Box and GCC compiler.
+
+Steps:-
+1) Open the Ubuntu Terminal.
+2) Create a C program using: `nano exp10.c`
+3) Program used:
+#include <stdio.h>
+#include <sys/wait.h>
+#include <unistd.h>
+int main() {
+  int pid;
+  printf("Parent PID: %d\n", getpid());
+  pid = fork();
+  if (pid < 0) {
+    printf("Fork failed \n");
+  }
+  else if (pid == 0)
+  {
+    printf("Child PID: %d\n", getpid());
+    printf("child process is running\n");
+  }
+  else {
+    wait(NULL);
+    printf("child process terminated\n");
+  }
+  return 0;
+}
+4) Save the file using Ctrl+O, press Enter and exit using Ctrl+X.
+5) Compile the program: `gcc exp10.c -o exp10`
+6) Execute the program: `./exp10`
+7) Observe the parent PID, child PID and termination message.
+
+Result:-
+Successfully created a child process using fork(), retrieved its PID using getpid() and waited for its termination using wait(NULL).

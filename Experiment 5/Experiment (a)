@@ -1,0 +1,34 @@
+DATE. 7-9-26
+EXP. No. 05
+
+Experiment -(a): Write a shell script that takes a command line argument and reports on whether it is a directory or a file.
+
+Theory-
+A shell script is a program written using shell commands. In linux command line arguments can be passed to a shell script while executing it.
+$1 represents the first command line argument passed to script.
+-f -> checks whether the argument is a regular file.
+-d -> checks whether the argument is a directory.
+
+Algorithm
+1. Start the program.
+2. Accept a path as a command line argument.
+3. Check if the argument is a regular file using -f.
+4. If true, display that it is a file.
+5. Otherwise, check if it is a directory using -d.
+6. If true, display that it is a directory.
+7. Otherwise, display that the given path does not exist.
+
+Shell Script
+#!/bin/bash
+if [ -f "$1" ]
+then
+echo "$1 is a file"
+elif [ -d "$1" ]
+then
+echo "$1 is a directory"
+else
+echo "$1 does not exist"
+fi
+
+Result
+Thus shell script was successfully executed to determine whether the given command line is a file or directory.

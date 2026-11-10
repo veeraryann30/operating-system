@@ -1,0 +1,24 @@
+DATE. 13-09-26
+EXP. No.... 06
+
+Experiment -(c): Write a shell script that deletes all lines containing a specified word in one or more files supplied as arguments to it.
+
+Steps:
+1. Open the Ubuntu terminal.
+2. Create a shell script -> nano exp 6c.sh
+3. Enter -> #!/bin/bash
+read -p "Enter word to delete: " word
+for file in "$@"
+do
+sed -i "/$word/d" "$file"
+done
+echo "Lines containing '$word' have been deleted"
+4. Save the file using Ctrl + O -> Enter and exit using Ctrl + X.
+5. Give execution permission -> chmod +x exp6c.sh
+6. Create sample file -> nano file 1.txt
+Add some lines containing the word you want to delete. Save and exit.
+7. Execute the script by providing one or more filenames -> exp6c.sh file1 file2.txt
+8. Enter the word when prompted.
+9. Check the modified file -> cat file 1.txt
+
+Result: Successfully deleted all line containing the specified word from one or more file supplied as arguments.

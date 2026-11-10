@@ -1,0 +1,13 @@
+DATE. 28-09-26
+EXP. No... 08
+
+Experiment - Write C Program that take as command line argument the no of megabytes of memory. is consume that much memory observed during execution using free command.
+
+Procedure :
+1. Create a C program named exp6.c to allocate memory in MB from the command line using malloc().
+2. Compile the program: gcc exp6.c -o exp6
+3. Run the program by providing the required memory size: ./exp6 100.
+4. Observe memory usage: free -h.
+5. Check the program's memory usage: ps aux | grep exp6.
+6. Release all allocated memory by pressing Ctrl + C to terminate the program.
+7. This allows the allocated memory to be released after the program has terminated.

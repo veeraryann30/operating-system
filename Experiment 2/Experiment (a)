@@ -1,0 +1,113 @@
+DATE: 19-08-26
+EXP. No. 02
+
+Experiment (a): Working with basic bash commands.
+COMMANDS:
+
+1. pwd : It tells us the complete location of the directory where we are currently working.
+Options:
+
+* pwd -L - Displays the logical path of the current directory.
+Example : $ pwd -L -> /home/user/College.
+* pwd -P - Displays the physical path of the current working directory.
+Example: $ pwd -P -> /home/user/College.
+* pwd --help - Gives information about the command and explains its available options.
+Example : $ pwd --help -> pwd [OPTION]...
+
+2. ls : It is used to display the files and directories available at a particular location.
+Options:
+
+* ls -l - Shows a long listing containing detailed file information.
+Example: -rw-r--r-- 1 student staff 2048 Sep 10 11:20 report.txt.
+* ls -a : Shows all contents present, including the hidden items.
+Example: . ... profile .config main.c.
+* ls -lt : Shows detailed information arranged according to modification time.
+Example: 11:20 report.txt -> 9:15 main.c -> 8:30 notes.txt.
+
+3. cd : It is used to shift or update the current folder location.
+Options:
+
+* cd .. : Navigates backward to the main parent folder.
+Example : ~/Projects/Code -> ~/Projects (moves one level up).
+* cd [directory name] : Navigates into the specified folder.
+Example: $cd Desktop -> /Desktop$ (opens Desktop folder).
+* cd : Directly redirects the workspace to the user home folder.
+Example : /var/www/html -> cd -> /home/user.
+
+4. mkdir : It is used to build or set up new directories.
+Options:
+
+* mkdir -v [name] - Displays a message confirming the folder creation.
+Example: $ mkdir -v LabWork -> mkdir: created directory 'LabWork'.
+* mkdir -p [name] - Creates nested parent directories if they are missing.
+Example: $ mkdir -p Course/Sem1/Labs.
+* mkdir -m [mode] [name] - Grants specific access modes to the new directory.
+Example: $ mkdir -m 755 Storage.
+
+---
+
+5. rmdir : It is used to delete folders that do not contain any files.
+Options:
+
+* rmdir -p [name] - Erases the target folder along with its parent paths.
+Example: $ rmdir -p Course/Sem1/Labs.
+* rmdir -v [name] - Erases the folder and outputs a success status message.
+Example: $ rmdir -v LabWork -> rmdir: removing directory, 'LabWork'.
+
+6. rm : It is used to remove files as well as folder structures.
+Options:
+
+* rm -i [file name] - Requests confirmation before performing the deletion.
+Example: $ rm -i test.txt -> rm: remove regular file 'test.txt'? y
+* rm -r [file name] - Deletes directories along with their subfolders recursively.
+Example: $ rm -r backupData.
+* rm -f [file name] - Removes items forcefully without prompting the user.
+Example: $ rm -f temp.log
+
+7. touch : It is used to generate blank files or update timestamps.
+Options:
+
+* touch -a [file name] - Modifies only the last access time of the file.
+Example: $ touch -a code.py
+* touch -m [file name] - Modifies only the last edit time of the file.
+Example: $ touch -m style.css
+* touch [file name] - Creates a completely new empty file.
+Example: $ touch file1.txt
+
+8. cp : It is used to make copies of files and directories.
+Options:
+
+* cp -i [name][name] - Asks for permission before replacing an existing file.
+Example: $ cp -i file1.txt copy.txt -> cp: overwrite 'copy.txt'? y
+* cp -v [name][name] - Shows step-by-step information during the copying process.
+Example: $ cp -v file1.txt Docs/ -> 'file1.txt' -> 'Docs/file1.txt'.
+* cp -r [name][name] - Duplicates directory contents recursively to a new place.
+Example: $ cp -r Audio Music
+
+---
+
+9. mv : It is used to relocate items or rename them.
+Options:
+
+* mv -i [name][name] - Displays a warning prompt prior to overwriting target files.
+Example: $ mv -i test.c final.c -> mv: overwrite 'final.c'? y
+* mv -v [name][name] - Displays details about the items shifted or renamed.
+Example: $ mv -v test.c Docs/ -> renamed 'test.c' -> 'Docs/test.c'.
+* mv -f [name][name] - Forces file relocation without asking for approval.
+Example: $ mv -f config.json Settings/
+
+10. head : It is used to print the top lines of a file.
+Options:
+
+* head -n [number] [name] - Displays the requested number of top lines.
+Example: $ head -n 3 data.csv -> Line 1, Line 2, Line 3.
+* head -c [number] [name] - Displays the specified initial byte count.
+Example: $ head -c 10 data.csv -> first 10 bytes of file.
+
+11. tail : It is used to print the bottom lines of the file.
+Options:
+
+* tail -n [number] [name] - Displays the requested number of bottom lines.
+Example: $ tail -n 3 data.csv -> Line 8, Line 9, Line 10.
+* tail -c [number] [name] - Displays the specified ending byte count.
+Example: $ tail -c 10 data.csv -> last 10 bytes of file.

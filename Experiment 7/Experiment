@@ -1,0 +1,23 @@
+DATE 23-09-26
+EXP. No.... 07
+
+Experiment - Write a shell script and a C Program to perform the following string operation:
+To extract a substring from a given string.
+To find the length of given string.
+Compare the running time of above shell script and C program using the time command.
+
+Steps:
+1. Write the C Program
+Create a C program to: Find the length of string.
+Extract a substring from given string.
+Compile the C Program
+gcc exp5.c -o string
+Compilation of Command & Successful Compilation.
+2. Execute the C Program
+./string
+Enter the required string, string position and no. of characters.
+3. Write the shell script - Create shell script to perform the same operation.
+4. Execute the shell script - ./exp5.sh
+5. Find execution time for C program. - time ./string
+6. Find execution time of shell script - time ./string
+7. Compare execution time.
